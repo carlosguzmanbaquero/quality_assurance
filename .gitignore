@@ -1,0 +1,8 @@
+node_modules
+__pycache__
+*.png
+*.jpg
+*.jpeg
+*.html
+*.xml
+*.pyc
