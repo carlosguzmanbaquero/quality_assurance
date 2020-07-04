@@ -12,6 +12,10 @@ ${fecha}                        '1989-04-08'
 ${telefono}                     987654321
 ${email}                        carlosgb.cali@hotmail.com
 ${contrasena}                   clave123456789https://meet.google.com/auh-ygcy-vvm?authuser=0]/div/div/div/ul/li[1]
+${selector_nombre}              id:register_FirstName
+${selector_apellido}            id:register_LastName
+${selector_genero}              xpath=//*[@id="register_Gender"]/div/div
+${selector_seleccion_genero}    xpath=/html/body/div[2]/div/div/div/ul/li[1]
 ${selector_documento}           id:register_NationalID
 ${selector_fecha}               .ant-calendar-picker-input.ant-input
 ${selector_telefono}            id:register_MobilePhone
