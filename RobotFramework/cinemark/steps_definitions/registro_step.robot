@@ -11,7 +11,9 @@ ingresar datos del formulario
     ingreso el apellido
     selecciono un genero
     #ingreso Numero de documento
-    editar input text por id  ${documento}  ${selector_documento}
+    #editar input text por id  ${documento}  ${selector_documento}
+    ${element} =               Get WebElement   ${selector_documento}   
+    editar input text por elemento  ${documento}  ${element}
     selecciono una Fecha de nacimiento
     relleno el campo Celular
     relleno el campo Correo electronico
