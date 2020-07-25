@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "de41772e-cc14-413e-92f0-de54c8c1a51d",
+		"name": "pruebas_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "lista_usuarios",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bf3ab574-db07-40af-9e5e-51e8cbe7611a",
+						"exec": [
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Contain domain\", function () {",
+							"    console.log(pm.environment.get('email_value'));",
+							"    pm.expect(pm.response.text()).to.include(pm.environment.get('email_value'));",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_webservice}}/users?page=2",
+					"host": [
+						"{{url_webservice}}"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
