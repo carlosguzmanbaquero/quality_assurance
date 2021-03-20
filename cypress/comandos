@@ -1,0 +1,12 @@
+https://www.youtube.com/watch?v=VimuR2V5Gf0&t=14s
+
+//instalar cypress
+npm install cypress --save-dev
+
+//agregar script
+"cypress:open": "cypress open"
+
+//ejecutar comando
+npm run cypress:open
+
+
