@@ -13,7 +13,9 @@
         .should('contain', 'Variables en GO');
         cy.get('a.dm.bq').contains('Variables en GO').click()
         cy.get('span.fy.hs.ht.gg.hu.b.dh.hv.hw.y.hx')
-        .should('contain', 'var nombre tipo = expresión');       
+        .should('contain', 'var nombre tipo = expresión')
+        cy.get('h3')
+        .should('not.exist')
         })
     })
  

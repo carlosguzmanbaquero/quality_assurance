@@ -9,4 +9,9 @@ npm install cypress --save-dev
 //ejecutar comando
 npm run cypress:open
 
+//cucumber
+npm install cypress-cucumber-preprocessor --save-dev
 
+npm install cosmiconfig --save-dev
+
+npm install --save-dev typescript
