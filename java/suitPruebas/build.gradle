@@ -20,8 +20,26 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
     implementation "com.sikulix:sikulixapi:1.1.4-SNAPSHOT"
     implementation "org.seleniumhq.selenium:selenium-java:3.141.59"
+    testImplementation 'io.cucumber:cucumber-java:6.8.1'
+}
+
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
 }
 
 test {
-    useJUnitPlatform()
+    //useJUnitPlatform()
+}
+
+task cucumber() {
+    dependsOn assemble, testClasses
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = ['--plugin', 'pretty', '--glue', '', 'src/test/resources']
+        }
+    }
 }
